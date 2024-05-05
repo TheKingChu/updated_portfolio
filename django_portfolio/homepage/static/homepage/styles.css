@@ -6,12 +6,51 @@ body {
 }
 
 /*SIDEBAR*/
-.nav{
+.sidebar{
+    height: 100%;
+    width: 400px; /* Adjust width as needed */
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 20px; /* Adjust top padding as needed */
     background-color: aqua;
 }
 
+#contact-button{
+    background-color: #191923;
+    border: none;
+    color: #FBFEF9;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    border-radius: 10px;
+}
+
+#contact-button:hover{
+    background-color: #FBFEF9;
+    color: #191923;
+}
+
 /*MAIN INDEX PAGE*/
-.title{
-    font-weight: 500;
-    color: blue;
+.main-page{
+    margin-left: 400px; /* Adjust margin-left to match sidebar width */
+    padding-left: 20px;
+}
+
+#title{
+    font-weight: 600;
+    font-size: 96px;
+    color: #AD2831;
+}
+
+#under-title{
+    font-size: 40px;
+    color: #191923;
+}
+
+.smaller-titles{
+    font-size: 24px;
+    color: #191923;
 }
