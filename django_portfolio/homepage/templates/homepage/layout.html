@@ -8,7 +8,7 @@
     </head>
     <body>
         <div class="sidebar">
-            <img src="images/bilde.jpg" alt="picture of me">
+            <img src="{% static 'homepage/bilde.jpg' %}" alt="Picture of me" id="me">
             <ul class="nav">
                 <li class="nav-item">
                     <a class="nav-link" href="https://github.com/TheKingChu">GitHub</a>
@@ -20,7 +20,8 @@
                     <a class="nav-link" href="https://www.linkedin.com/in/charlieeik%C3%A5s/">LinkedIn</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link">Resume</a>
+                    <a class="nav-link" href="{% static 'homepage/CV' %}" target="_blank">Resume</a>
+                <hr>
                 </li>
                 <li class="nav-item">
                     <button id="contact-button">Contact Me</button>
