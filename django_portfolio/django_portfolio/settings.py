@@ -23,11 +23,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-w97jgapt$sbj4ney-m5@p1m10t9v^ad!(9)^ht&#9o_7yw^xp&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app', 'now.sh', '127.0.0.1', 'localhost']
-
-STATIC_ROOT = BASE_DIR / "staticfiles" / "static"
+ALLOWED_HOSTS = [
+    '.netlify.app',
+    '127.0.0.1'
+]
 
 
 # Application definition
@@ -70,7 +71,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'django_portfolio.wsgi.app'
+WSGI_APPLICATION = 'django_portfolio.wsgi.application'
 
 
 # Database
@@ -78,12 +79,8 @@ WSGI_APPLICATION = 'django_portfolio.wsgi.app'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': 'GDojgTCgqGVdiGUFzjSdLKmxBbSwNDJs',
-        'HOST': 'monorail.proxy.rlwy.net',
-        'PORT': '31778',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
