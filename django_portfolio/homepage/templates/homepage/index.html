@@ -2,8 +2,10 @@
 {% load static %}
 
 {% block body %}
-    <h2 class="title">Charlie Eikås</h2>
-    <h3 class="title" id="under">Game Developer</h3>
+    <div class="title">
+        <h2 style="font-size:100px">Charlie Eikås &#128640;</h2>
+        <h3>Game Developer</h3>
+    </div>
 
     <video width="640" height="480" autoplay muted>
         <source src="{% static 'homepage/showreelTest1.mp4' %}" type="video/mp4">
@@ -12,6 +14,18 @@
     <!-- WHAT IM CURRENTLY WORKING ON -->
     <div id="current-work">
         <h4 class="smaller-titles">Currently Working On:</h4>
+        <div class="project-status">
+            <span class="status-icon-active"></span>
+            <p class="status-text">Crypt of Damnation: Unleash the Curse using C#, Unity and Aseprite</p>
+        </div>
+        <div class="project-status">
+            <span class="status-icon-active"></span>
+            <p class="status-text">Spotify Playlist Generator using Django and Spotipy</p>
+        </div>
+        <div class="project-status">
+            <span class="status-icon-active"></span>
+            <p class="status-text">Taking the CS50W course from Harvard</p>
+        </div>
     </div>
 
     <!-- TECHNOLOGIES I USE -->
@@ -42,14 +56,20 @@
         <div class="project-details">
             <h3 class="project-title">A God's Draw</h3>
             <ul class="project-points">
-                <li>Created a randomized map</li>
-                <li>Created the reward scene</li>
+                <li>Created the randomized map</li>
+                <li>Created the reward system and scene design</li>
                 <li>Created the saving system</li>
             </ul>
             <div class="project-buttons">
-                <button class="button">GitHub</button>
-                <button class="button">Itch.io</button>
-                <button class="button" href="{% url 'agodsdraw' %}">Read Me</button>
+                <a href="https://github.com/TheKingChu/A-Gods-Draw">
+                    <button class="button">GitHub</button>
+                </a>
+                <a href="https://thekingcharlie.itch.io/a-gods-draw">
+                    <button class="button">Itch.io</button>
+                </a>
+                <a>
+                    <button style='font-size:24px;' class="read-me">Read Me &#128274;</button>
+                </a>
             </div>
         </div>
     </div>
@@ -66,9 +86,15 @@
                 <li>Made a lot of prototypes for testing</li>
             </ul>
             <div class="project-buttons">
-                <button class="button">GitHub</button>
-                <button class="button">Itch.io</button>
-                <button class="button">Read Me</button>
+                <a href="https://github.com/TheKingChu/Negative-effect">
+                    <button class="button">GitHub</button>
+                </a>
+                <a href="https://nicrus.itch.io/negative-effect">
+                    <button class="button">Itch.io</button>
+                </a>
+                <a>
+                    <button style='font-size:24px;' class="read-me">Read Me &#128274;</button>
+                </a>
             </div>
         </div>
     </div>

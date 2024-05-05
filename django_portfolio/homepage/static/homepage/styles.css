@@ -86,32 +86,50 @@ hr{
 video{
     position: absolute;
     margin-left: 30%;
-    transform: translateY(-150px);
     max-width: 100%;
     height: auto;
     border-radius: 20px;
 }
 
-.title{
+.title h2{
     font-size: 96px;
     color: #AD2831;
+    margin-bottom: -50px;
 }
 
-#under{
+.title h3{
     font-size: 40px;
     color: #191923;
-    transform: translateY(-100px);
 }
 
 .smaller-titles{
     font-size: 24px;
-    font-weight: 500;
+    font-weight: 600;
     color: #191923;
 }
 
 #current-work{
-    transform: translateY(-100px);
+    width: 500px;
+    word-wrap: break-word;
 }
+
+.project-status {
+    display: flex;
+    align-items: center;
+}
+
+.status-icon-active {
+    width: 20px;
+    height: 20px;
+    background-color: #176117; /* Green color for the checkmark */
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.status-text {
+    font-size: 16px;
+}
+
 
 #tech-container{
     display: flex;
@@ -159,7 +177,7 @@ video{
 .project-title {
     font-size: 24px;
     margin-bottom: 10px;
-    margin-left: 37px;
+    margin-left: 50px;
 }
 
 .project-points {
@@ -168,20 +186,21 @@ video{
 
 .project-points li {
     position: relative; /* Position relative for pseudo-element */
-    padding-left: 25px;
+    padding-left: 35px;
     margin-bottom: 20px;
 }
 
 .project-points li::before {
     content: "\2713"; /* Unicode check mark character */
     position: absolute;
-    left: 0;
+    left: 10px;
 }
 
 .project-buttons {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
-    margin-top: 30px;
+    justify-content: space-evenly;
+    margin-top: 20px;
 }
 
 .project-buttons button {
@@ -190,10 +209,10 @@ video{
     background-color: #191923;
     border: 2px solid #191923;
     color: #FBFEF9;
-    padding: 5px 0;
+    padding: 5px 20px;
     text-align: center;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 24px;
     border-radius: 10px;
     transition-duration: 0.4s;
     cursor: pointer;
@@ -202,4 +221,14 @@ video{
 .project-buttons button:hover {
     background-color: #FBFEF9;
     color: #191923;
+}
+
+.read-me{
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.read-me:hover{
+    opacity: 0.6;
+    cursor: not-allowed;
 }
