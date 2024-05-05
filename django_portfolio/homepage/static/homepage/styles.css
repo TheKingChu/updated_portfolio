@@ -1,0 +1,17 @@
+body {
+    padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #FBFEF9;
+    color: #191923;
+}
+
+/*SIDEBAR*/
+.nav{
+    background-color: aqua;
+}
+
+/*MAIN INDEX PAGE*/
+.title{
+    font-weight: 500;
+    color: blue;
+}
