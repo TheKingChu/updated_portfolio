@@ -1,0 +1,234 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #F7DEE0;
+    color: #191923;
+}
+
+/*SIDEBAR*/
+.sidebar{
+    height: 100%;
+    width: 400px; /* Adjust width as needed */
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 20px; /* Adjust top padding as needed */
+    background-color: #F7DEE0;
+}
+
+#me{
+    display: block;
+    width: 128px;
+    height: auto;
+    border-radius: 10px;
+    border: 5px solid #F7DEE0;
+    padding: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+.nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    margin-top: 30px;
+    margin-bottom: 10px; /* Add spacing between list items */
+    text-align: center;
+    font-weight: bolder;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #191923;
+}
+
+.nav-link:hover{
+    color: #AD2831;
+    text-decoration: underline;
+}
+
+hr{
+    margin-top: 40px;
+    width: 150px;
+    size: 10px;
+}
+
+#contact-button{
+    background-color: #191923;
+    border: 2px solid #191923;
+    color: #FBFEF9;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    border-radius: 10px;
+    margin-top: 10px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+#contact-button:hover{
+    background-color: #FBFEF9;
+    color: #191923;
+}
+
+/*MAIN INDEX PAGE*/
+.main-page{
+    margin-left: 25%; /* Adjust margin-left to match sidebar width */
+    padding-left: 20px;
+}
+
+video{
+    position: absolute;
+    margin-left: 30%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.title h2{
+    font-size: 96px;
+    color: #AD2831;
+    margin-bottom: -50px;
+}
+
+.title h3{
+    font-size: 40px;
+    color: #191923;
+}
+
+.smaller-titles{
+    font-size: 24px;
+    font-weight: 600;
+    color: #191923;
+}
+
+#current-work{
+    width: 500px;
+    word-wrap: break-word;
+}
+
+.project-status {
+    display: flex;
+    align-items: center;
+}
+
+.status-icon-active {
+    width: 20px;
+    height: 20px;
+    background-color: #176117; /* Green color for the checkmark */
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.status-text {
+    font-size: 16px;
+}
+
+
+#tech-container{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+}
+
+.tech-item{
+    font-size: 24px;
+    display: inline-block;
+    padding: 5px;
+    border: 3px solid #AD2831;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+.project-card {
+    display: flex;
+    width: 1200px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: #AD2831;
+    color: #FBFEF9;
+}
+
+.project-image {
+    flex: 1;
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 0 0 10px;
+}
+
+.project-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.project-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+}
+
+.project-points {
+    list-style-type: none;
+}
+
+.project-points li {
+    position: relative; /* Position relative for pseudo-element */
+    padding-left: 35px;
+    margin-bottom: 20px;
+}
+
+.project-points li::before {
+    content: "\2713"; /* Unicode check mark character */
+    position: absolute;
+    left: 10px;
+}
+
+.project-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.project-buttons button {
+    flex: 1;
+    margin-right: 10px;
+    background-color: #191923;
+    border: 2px solid #191923;
+    color: #FBFEF9;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 24px;
+    border-radius: 10px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.project-buttons button:hover {
+    background-color: #FBFEF9;
+    color: #191923;
+}
+
+.read-me{
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.read-me:hover{
+    opacity: 0.6;
+    cursor: not-allowed;
+}
