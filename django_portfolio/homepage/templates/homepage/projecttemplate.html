@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="{% static 'homepage/styles.css' %}">
     </head>
     <body>
+        <!-- SIDEBAR -->
         <div class="sidebar">
             <img src="{% static 'homepage/bilde.jpg' %}" alt="Picture of me" id="me">
             <ul class="nav">
@@ -30,9 +31,41 @@
                 </li>
             </ul>
         </div>
+
+        <!-- MAIN PAGE -->
         <div class="main-page">
-            {% block body %}
+            <a href="{% url 'index' %}">
+                <button id="back-button">Back</button>
+            </a>
+            {% block gif %}
+            <div class="project-header">
+                <!-- Placeholder for GIF -->
+            </div>
+            {% endblock %}
+            <div class="about-info-container">
+                {% block about %}
+                <div class="project-section">
+                    <div class="about-box">
+                        <h2>About</h2>
+                        <!-- Placeholder for about section -->
+                    </div>
+                </div>
+                {% endblock %}
+                {% block project_info %}
+                <div class="project-section">
+                    <div class="info-box">
+                        <h2>Project Info</h2>
+                        <!-- Placeholder for project info section -->
+                    </div>
+                </div>
+                {% endblock %}
+            </div>
+            {% block learnings %}
+            <div class="learnings-section">
+                <h2>What I Learned</h2>
+                <!-- Placeholder for learnings section -->
+            </div>
             {% endblock %}
         </div>
-        </body>
+    </body>
 </html>

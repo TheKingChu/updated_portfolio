@@ -1,0 +1,37 @@
+{% extends "homepage/projecttemplate.html" %}
+{% load static %}
+
+{% block gif %}
+<div class="project-header">
+    <!-- Include GIF specific to this project -->
+    <img src="{% static 'project_gif.gif' %}" alt="Project GIF">
+</div>
+{% endblock %}
+
+{% block about %}
+<div class="project-section">
+    <div class="about-box">
+        <h2>About</h2>
+        <!-- Add project-specific about content here -->
+        <p>This is a brief introduction to the project.</p>
+    </div>
+</div>
+{% endblock %}
+
+{% block project_info %}
+<div class="project-section">
+    <div class="info-box">
+        <h2>Project Info</h2>
+        <!-- Add project-specific info content here -->
+        <p>This section contains project details.</p>
+    </div>
+</div>
+{% endblock %}
+
+{% block learnings %}
+<div class="learnings-section">
+    <h2>What I Learned</h2>
+    <!-- Add project-specific learnings here -->
+    <p>This section discusses what I learned from the project.</p>
+</div>
+{% endblock %}
