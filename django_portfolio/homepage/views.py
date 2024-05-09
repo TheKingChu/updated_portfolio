@@ -5,4 +5,4 @@ def index(request):
     return render(request, "homepage/index.html")
 
 def agodsdraw(request):
-    pass
+    return render(request, "homepage/agodsdraw.html")

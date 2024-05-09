@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{% block title %}Charlie Eikås{% endblock %}</title>
+        <link rel="stylesheet" href="{% static 'homepage/styles.css' %}">
+    </head>
+    <body>
+        <div class="sidebar">
+            <img src="{% static 'homepage/bilde.jpg' %}" alt="Picture of me" id="me">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/TheKingChu">GitHub</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://thekingcharlie.itch.io/">Itch.io</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.linkedin.com/in/charlieeik%C3%A5s/">LinkedIn</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% static 'homepage/CV.pdf' %}" target="_blank">Resume</a>
+                <hr>
+                </li>
+                <li class="nav-item">
+                    <a href="mailto:eikascharlie@gmail.com">
+                        <button id="contact-button">Contact Me</button>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main-page">
+            {% block body %}
+            {% endblock %}
+        </div>
+        </body>
+</html>

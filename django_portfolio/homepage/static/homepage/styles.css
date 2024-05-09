@@ -1,7 +1,7 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #F7DEE0;
-    color: #191923;
+    background-color: #0c0c0c;
+    color: #f7f7f2;
 }
 
 /*SIDEBAR*/
@@ -12,7 +12,7 @@ body {
     top: 0;
     left: 0;
     padding-top: 20px; /* Adjust top padding as needed */
-    background-color: #F7DEE0;
+    background-color: #0c0c0c;
 }
 
 #me{
@@ -20,9 +20,9 @@ body {
     width: 128px;
     height: auto;
     border-radius: 10px;
-    border: 5px solid #F7DEE0;
+    border: 5px solid #0c0c0c;
     padding: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(132, 132, 132, 0.2);
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
@@ -43,11 +43,11 @@ body {
 
 .nav-link {
     text-decoration: none;
-    color: #191923;
+    color: #f7f7f2;
 }
 
 .nav-link:hover{
-    color: #AD2831;
+    color: #f7b2b2;
     text-decoration: underline;
 }
 
@@ -58,8 +58,8 @@ hr{
 }
 
 #contact-button{
-    background-color: #191923;
-    border: 2px solid #191923;
+    background-color: #393939;
+    border: 2px solid #393939;
     color: #FBFEF9;
     padding: 10px 25px;
     text-align: center;
@@ -93,19 +93,19 @@ video{
 
 .title h2{
     font-size: 96px;
-    color: #AD2831;
+    color: #f7b2b2;
     margin-bottom: -50px;
 }
 
 .title h3{
     font-size: 40px;
-    color: #191923;
+    color: #f7b2b2;
 }
 
 .smaller-titles{
     font-size: 24px;
     font-weight: 600;
-    color: #191923;
+    color: #7de2dc;
 }
 
 #current-work{
@@ -121,7 +121,7 @@ video{
 .status-icon-active {
     width: 20px;
     height: 20px;
-    background-color: #176117; /* Green color for the checkmark */
+    background-color: #35a935; /* Green color for the checkmark */
     border-radius: 50%;
     margin-right: 10px;
 }
@@ -140,9 +140,10 @@ video{
 
 .tech-item{
     font-size: 24px;
+    color: #f7b2b2;
     display: inline-block;
     padding: 5px;
-    border: 3px solid #AD2831;
+    border: 3px solid #f7b2b2;
     margin-right: 10px;
     border-radius: 10px;
 }
@@ -153,7 +154,7 @@ video{
     margin-bottom: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    background-color: #AD2831;
+    background-color: #393939;
     color: #FBFEF9;
 }
 
@@ -178,6 +179,7 @@ video{
     font-size: 24px;
     margin-bottom: 10px;
     margin-left: 50px;
+    color: #f7b2b2;
 }
 
 .project-points {
