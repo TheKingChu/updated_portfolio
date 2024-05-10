@@ -9,6 +9,30 @@
         <h3>Game Developer</h3>
     </div>
 
+    <!-- SIDEBAR INFO BUT FOR PHONE -->
+    <div id="social-container">
+        <li class="social-item">
+            <a class="social-link" href="https://github.com/TheKingChu">
+                <button><i class="fa-brands fa-github"></i></button>
+            </a>
+        </li>
+        <li class="social-item">
+            <a class="social-link" href="https://thekingcharlie.itch.io/">
+                <button><i class="fa-brands fa-itch-io"></i></button>
+            </a>
+        </li>
+        <li class="social-item">
+            <a class="social-link" href="https://www.linkedin.com/in/charlieeik%C3%A5s/">
+                <button><i class="fa-brands fa-linkedin"></i></button>
+            </a>
+        </li>
+        <li class="social-item">
+            <a class="social-link" href="{% static 'homepage/CV.pdf' %}" target="_blank">
+                <button><i class="fa-regular fa-file"></i></button>
+            </a>
+        </li>
+    </div>
+
     <!-- WHAT IM CURRENTLY WORKING ON -->
     <div id="current-work">
         <h4 class="smaller-titles">Currently Working On:</h4>
@@ -30,12 +54,12 @@
     <div>
         <h4 class="smaller-titles">Technologies:</h4>
         <ul id="tech-container">
-            <li class="tech-item"><i class="fa-brands fa-html5"></i> HTML</li>
-            <li class="tech-item"><i class="fa-brands fa-css3-alt"></i> CSS</li>
-            <li class="tech-item"><i></i>C#</li>
-            <li class="tech-item"><i class="fa-brands fa-python"></i>Python</li>
-            <li class="tech-item"><i></i>Django</li>
-            <li class="tech-item"><i class="fa-brands fa-unity"></i>Unity</li>
+            <li class="tech-item"><i class="fa-brands fa-html5" data-tooltip="HTML"></i> HTML</li>
+            <li class="tech-item"><i class="fa-brands fa-css3-alt" data-tooltip="CSS"></i> CSS</li>
+            <li class="tech-item" id="csharp"><i data-tooltip="C#"></i>C#</li>
+            <li class="tech-item"><i class="fa-brands fa-python" data-tooltip="Python"></i> Python</li>
+            <li class="tech-item" id="django"><i data-tooltip="Django"></i>Django</li>
+            <li class="tech-item"><i class="fa-brands fa-unity" data-tooltip="Unity"></i> Unity</li>
         </ul>
     </div>
 
@@ -54,9 +78,9 @@
         <div class="project-details">
             <h3 class="project-title">A God's Draw</h3>
             <ul class="project-points">
-                <li>Created the randomized map</li>
-                <li>Created the reward system and scene design</li>
-                <li>Created the saving system</li>
+                <li><i class="fa-solid fa-check"></i> Created the randomized map</li>
+                <li><i class="fa-solid fa-check"></i> Created the reward system and scene design</li>
+                <li><i class="fa-solid fa-check"></i> Created the saving system</li>
             </ul>
             <div class="project-buttons">
                 <a href="https://github.com/TheKingChu/A-Gods-Draw">
@@ -79,9 +103,9 @@
         <div class="project-details">
             <h3 class="project-title">Negative Effect</h3>
             <ul class="project-points">
-                <li>Created the main VR mechanics</li>
-                <li>Created the wrist menu</li>
-                <li>Made a lot of prototypes for testing</li>
+                <li><i class="fa-solid fa-check"></i> Created the main VR mechanics</li>
+                <li><i class="fa-solid fa-check"></i> Created the wrist menu</li>
+                <li><i class="fa-solid fa-check"></i> Made a lot of prototypes for testing</li>
             </ul>
             <div class="project-buttons">
                 <a href="https://github.com/TheKingChu/Negative-effect">
@@ -91,7 +115,7 @@
                     <button class="button">Itch.io</button>
                 </a>
                 <a>
-                    <button style='font-size:24px;' class="read-me">Read Me &#128274;</button>
+                    <button class="read-me">Read Me &#128274;</button>
                 </a>
             </div>
         </div>

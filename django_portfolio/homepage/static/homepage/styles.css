@@ -55,6 +55,7 @@ hr{
     margin-top: 40px;
     width: 150px;
     size: 10px;
+    border-color: #f7b2b2;
 }
 
 #contact-button{
@@ -73,7 +74,7 @@ hr{
 }
 
 #contact-button:hover{
-    background-color: #FBFEF9;
+    background-color: #7de2dc;
     color: #191923;
 }
 
@@ -184,25 +185,20 @@ video{
 .project-title {
     font-size: 24px;
     margin-bottom: 10px;
-    margin-left: 50px;
+    margin-left: 40px;
     color: #f7b2b2;
 }
 
 /* PROJECT POINTS */
 .project-points {
     list-style-type: none;
+    margin-left: 40px;
+    padding-left: 0;
 }
 
 .project-points li {
     position: relative; /* Position relative for pseudo-element */
-    padding-left: 35px;
     margin-bottom: 20px;
-}
-
-.project-points li::before {
-    content: "\2713"; /* Unicode check mark character */
-    position: absolute;
-    left: 10px;
 }
 
 /* PROJECT BUTTONS */
@@ -229,7 +225,7 @@ video{
 }
 
 .project-buttons button:hover {
-    background-color: #FBFEF9;
+    background-color: #7de2dc;
     color: #191923;
 }
 
@@ -287,7 +283,9 @@ video{
     margin-right: 20px; /* Add margin between boxes */
 }
 
-
+#social-container{
+    display: none;
+}
 
 
 /* PHONE VIEW */
@@ -301,7 +299,11 @@ video{
         width: 90%;
     }
 
-    .title{
+    .title h2{
+        font-size: 50px;
+    }
+
+    .title h3{
         font-size: 36px;
     }
 
@@ -309,16 +311,26 @@ video{
         font-size: 24px;
     }
 
-    /* Style the contact buttons */
-    .contact-buttons {
+    #social-container{
         display: flex;
-        justify-content: space-evenly;
-        margin-bottom: 20px;
+        align-items: center;
+        margin-top: 20px;
+        list-style: none;
     }
 
-    .contact-buttons button {
-        width: 120px; /* Adjust button width */
-        font-size: 16px;
+    .social-link button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .social-link button i {
+        font-size: 50px;
+        color: #FBFEF9;
+    }
+
+    .social-link button:hover i {
+        color: #f7b2b2;
     }
 
     /* Style the currently working on section */
@@ -328,7 +340,7 @@ video{
 
     /* Style the tech stack section */
     #tech-container {
-        width: 90%; /* Adjust width as needed */
+        width: 50%; /* Adjust width as needed */
     }
 
     .tech-item {
@@ -338,19 +350,53 @@ video{
         margin: 10px;
     }
 
+    #csharp{
+        font-size: 27px;
+    }
+
+    #django{
+        font-size: 14px;
+    }
+
     .tech-item i {
-        font-size: 24px;
-        margin-right: 10px;
-        color: #f7f7f2;
+        display: inline-block;
+        position: relative;
+        font-size: 50px;
+        margin: 0 4px
+    }
+
+    .tech-item i::after {
+        content: attr(data-tooltip); /* Get the tooltip text from the 'data-tooltip' attribute */
+        position: absolute;
+        top: 120%; /* Position the tooltip below the icon */
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(255, 143, 143, 0.8);
+        color: #FBFEF9;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 14px;
+        white-space: nowrap; /* Prevent line breaks */
+        opacity: 0; /* Initially hide the tooltip */
+        transition: opacity 0.3s ease;
+    }
+
+    .tech-item i:hover::after {
+        opacity: 1;
     }
 
     /* Style the projects section */
     .project-card {
         width: 90%; /* Adjust width as needed */
+        flex-direction: column;
     }
 
     .project-title {
         font-size: 20px;
+    }
+
+    .project-points{
+        word-wrap: break-word;
     }
 
     .project-buttons button {
