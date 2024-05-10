@@ -6,3 +6,6 @@ def index(request):
 
 def agodsdraw(request):
     return render(request, "homepage/agodsdraw.html")
+
+def negativeeffect(request):
+    return render(request, "homepage/negativeeffect.html")

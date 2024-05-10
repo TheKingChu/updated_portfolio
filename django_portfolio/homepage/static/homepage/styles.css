@@ -286,3 +286,77 @@ video{
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-right: 20px; /* Add margin between boxes */
 }
+
+
+
+
+/* PHONE VIEW */
+@media screen and (max-width: 1500px){
+    .sidebar{
+        display: none;
+    }
+
+    .main-page{
+        margin: auto;
+        width: 90%;
+    }
+
+    .title{
+        font-size: 36px;
+    }
+
+    .smaller-titles{
+        font-size: 24px;
+    }
+
+    /* Style the contact buttons */
+    .contact-buttons {
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 20px;
+    }
+
+    .contact-buttons button {
+        width: 120px; /* Adjust button width */
+        font-size: 16px;
+    }
+
+    /* Style the currently working on section */
+    #current-work {
+        width: 90%; /* Adjust width as needed */
+    }
+
+    /* Style the tech stack section */
+    #tech-container {
+        width: 90%; /* Adjust width as needed */
+    }
+
+    .tech-item {
+        width: 50px; /* Adjust box width */
+        height: 50px; /* Adjust box height */
+        font-size: 16px;
+    }
+
+    /* Style the projects section */
+    .project-card {
+        width: 90%; /* Adjust width as needed */
+    }
+
+    .project-title {
+        font-size: 20px;
+    }
+
+    .project-buttons button {
+        font-size: 16px;
+    }
+
+    /* Style the about me section */
+    .about-info-container {
+        width: 90%; /* Adjust width as needed */
+    }
+
+    .about-box, .info-box {
+        width: 90%; /* Adjust width as needed */
+        margin-right: 0; /* Remove right margin */
+    }
+}
