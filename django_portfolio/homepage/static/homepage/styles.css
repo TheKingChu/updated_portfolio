@@ -332,9 +332,16 @@ video{
     }
 
     .tech-item {
-        width: 50px; /* Adjust box width */
-        height: 50px; /* Adjust box height */
-        font-size: 16px;
+        width: 50px;
+        height: 50px;
+        font-size: 0;
+        margin: 10px;
+    }
+
+    .tech-item i {
+        font-size: 24px;
+        margin-right: 10px;
+        color: #f7f7f2;
     }
 
     /* Style the projects section */
