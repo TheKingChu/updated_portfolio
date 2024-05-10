@@ -300,14 +300,18 @@ video{
     }
 
     .title h2{
-        font-size: 50px;
+        font-size: 70px;
     }
 
     .title h3{
-        font-size: 36px;
+        font-size: 60px;
     }
 
     .smaller-titles{
+        font-size: 40px;
+    }
+
+    p{
         font-size: 24px;
     }
 
@@ -338,30 +342,43 @@ video{
         width: 90%; /* Adjust width as needed */
     }
 
+    .status-text{
+        font-size: 24px;
+    }
+
+    .status-icon-active{
+        width: 20px;
+        height: 20px;
+        min-width: 15px; /* Minimum width for smaller screens */
+        min-height: 15px; /* Minimum height for smaller screens */
+        background-color: #35a935;
+        margin-right: 10px;
+    }
+
     /* Style the tech stack section */
     #tech-container {
         width: 50%; /* Adjust width as needed */
     }
 
     .tech-item {
-        width: 50px;
-        height: 50px;
+        width: 80px;
+        height: 80px;
         font-size: 0;
         margin: 10px;
     }
 
     #csharp{
-        font-size: 27px;
+        font-size: 37px;
     }
 
     #django{
-        font-size: 14px;
+        font-size: 22px;
     }
 
     .tech-item i {
         display: inline-block;
         position: relative;
-        font-size: 50px;
+        font-size: 80px;
         margin: 0 4px
     }
 
@@ -392,15 +409,16 @@ video{
     }
 
     .project-title {
-        font-size: 20px;
+        font-size: 30px;
     }
 
     .project-points{
+        font-size: 24px;
         word-wrap: break-word;
     }
 
     .project-buttons button {
-        font-size: 16px;
+        font-size: 24px;
     }
 
     /* Style the about me section */
