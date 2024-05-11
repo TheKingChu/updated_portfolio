@@ -332,6 +332,7 @@ video{
         background-color: transparent;
         border: none;
         cursor: pointer;
+        margin-left: 30px;
     }
 
     .social-link button i {
@@ -350,6 +351,7 @@ video{
 
     .status-text{
         font-size: 30px;
+        text-align: start;
     }
 
     .status-icon-active{
@@ -417,7 +419,7 @@ video{
     }
 
     .project-title {
-        font-size: 35px;
+        font-size: 45px;
     }
 
     .project-points{
