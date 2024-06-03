@@ -94,8 +94,8 @@
                 <a href="https://thekingcharlie.itch.io/a-gods-draw">
                     <button class="button">Itch.io</button>
                 </a>
-                <a>
-                    <button class="read-me">Read Me &#128274;</button>
+                <a href="{% url 'agodsdraw' %}">
+                    <button class="read-me">Read Me <i class="fa-solid fa-lock-open"></i></button>
                 </a>
             </div>
         </div>
@@ -103,7 +103,7 @@
     <!-- SECOND PROJECT CARD -->
     <div class="project-card">
         <div class="project-image">
-            <img src="{% static 'homepage/negative.png' %}" alt="Project Image">
+            <img src="{% static 'homepage/ne_cover.png' %}" alt="Project Image">
         </div>
         <div class="project-details">
             <h3 class="project-title">Negative Effect</h3>
@@ -119,10 +119,42 @@
                 <a href="https://nicrus.itch.io/negative-effect">
                     <button class="button">Itch.io</button>
                 </a>
-                <a>
-                    <button class="read-me">Read Me &#128274;</button>
+                <a href="{% url 'negativeeffect' %}">
+                    <button class="read-me-locked">Read Me <i class="fa-solid fa-lock"></i></button>
                 </a>
             </div>
         </div>
+    </div>
+    <!-- THIRD PROJECT CARD -->
+    <div class="project-card">
+        <div class="project-image">
+            <img src="{% static 'homepage/omd_cover.png' %}" alt="Project Image">
+        </div>
+        <div class="project-details">
+            <h3 class="project-title">One More Door</h3>
+            <ul class="project-points">
+                <li><i class="fa-solid fa-check"></i> Created mechanics for phone inputs</li>
+                <li><i class="fa-solid fa-check"></i> Vector art made in Adobe Illustrator</li>
+                <li><i class="fa-solid fa-check"></i> Helped on level/puzzle designs</li>
+            </ul>
+            <div class="project-buttons">
+                <a href="https://github.com/TheKingChu/One-more-door">
+                    <button class="button">GitHub</button>
+                </a>
+                <a href="https://nicrus.itch.io/one-more-door">
+                    <button class="button">Itch.io</button>
+                </a>
+                <a>
+                    <button class="read-me-locked">Read Me <i class="fa-solid fa-lock"></i></button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- CHECK OUT MORE PROJECTS -->
+    <div>
+        <button>
+            <a href="">Check Out More Projects</a>
+        </button>
     </div>
 {% endblock %}

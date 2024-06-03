@@ -2,6 +2,9 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: #0c0c0c;
     color: #f7f7f2;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
 }
 
 /*SIDEBAR*/
@@ -80,16 +83,8 @@ hr{
 
 /*MAIN INDEX PAGE*/
 .main-page{
-    margin-left: 25%; /* Adjust margin-left to match sidebar width */
+    margin-left: 400px; /* Adjust margin-left to match sidebar width */
     padding-left: 20px;
-}
-
-video{
-    position: absolute;
-    margin-left: 30%;
-    max-width: 100%;
-    height: auto;
-    border-radius: 20px;
 }
 
 .title h2{
@@ -139,6 +134,7 @@ video{
     flex-wrap: wrap;
     list-style-type: none;
     padding: 0;
+    margin: 0 auto;
 }
 
 .tech-item{
@@ -154,17 +150,20 @@ video{
 /* PROJECTS */
 .project-card {
     display: flex;
-    width: 1200px;
+    width: 100%;
+    max-width: 1200px;
     margin-bottom: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     background-color: #393939;
     color: #FBFEF9;
+    overflow: hidden; /* Make sure child elements dont overflow */
 }
 
 /* PROJECT IMAGE */
 .project-image {
     flex: 1;
+    display: flex;
 }
 
 .project-image img {
@@ -231,11 +230,19 @@ video{
 
 /* READ ME BUTTON */
 .read-me{
+    opacity: 1;
+}
+
+.read-me:hover{
+    cursor: pointer;
+}
+
+.read-me-locked{
     opacity: 0.6;
     cursor: not-allowed;
 }
 
-.read-me:hover{
+.read-me-locked:hover{
     opacity: 0.6;
     cursor: not-allowed;
 }
@@ -243,20 +250,35 @@ video{
 
 /* READ ME PAGE */
 #back-button{
-    color: #0c0c0c;
+    background-color: #393939;
+    border: 2px solid #393939;
+    color: #FBFEF9;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    border-radius: 10px;
+    margin-top: 10px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+#back-button:hover{
+    background-color: #7de2dc;
+    color: #191923;
 }
 
 .project-header {
     margin-bottom: 20px;
 }
 
-.about-info-container {
+.about-container {
     display: flex;
-    flex-wrap: wrap;
-    width: 100%;
+    justify-content: space-between;
 }
 
-.about-box, .info-box {
+.about-box{
     flex: 1;
     background-color: #393939;
     padding: 20px;
@@ -264,11 +286,63 @@ video{
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-right: 20px; /* Add margin between boxes */
     margin-bottom: 20px; /* Add margin at the bottom */
+    max-width: 50%;
+
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+.info-box{
+    background-color: #393939;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-right: 20px; /* Add margin between boxes */
+    margin-bottom: 20px; /* Add margin at the bottom */
+
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+.info-box h2{
+    color: #f7b2b2;
+}
+
+.about-box h2, h3{
+    color: #f7b2b2;
 }
 
 /* Clear the margin for the last item in a row */
 .about-box:nth-child(2n), .info-box:nth-child(2n) {
     margin-right: 0;
+}
+
+.about-box li, .info-box li{
+    position: relative; /* Position relative for pseudo-element */
+    margin-bottom: 20px;
+}
+
+.about-box li::marker, .info-box li::marker{
+    color: #7de2dc;
+}
+
+.gallery-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 50%;
+}
+
+.image-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between images */
+}
+
+.image-gallery img {
+    width: 100%;
+    border-radius: 10px;
 }
 
 .project-section {
@@ -281,6 +355,22 @@ video{
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-right: 20px; /* Add margin between boxes */
+    margin-bottom: 20px;
+
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+.learnings-section h2{
+    color: #f7b2b2;
+}
+
+.learnings-section li{
+    position: relative; /* Position relative for pseudo-element */
+}
+
+.learnings-section li::marker{
+    color: #7de2dc;
 }
 
 #social-container{
@@ -289,7 +379,7 @@ video{
 
 
 /* PHONE VIEW */
-@media screen and (max-width: 1500px){
+@media screen and (max-width: 1200px){
     .sidebar{
         display: none;
     }
@@ -432,12 +522,14 @@ video{
     }
 
     /* Style the about me section */
-    .about-info-container {
-        width: 90%; /* Adjust width as needed */
+    .about-container {
+        flex-direction: column;
     }
 
     .about-box, .info-box {
-        width: 90%; /* Adjust width as needed */
-        margin-right: 0; /* Remove right margin */
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        text-align: center;
     }
 }

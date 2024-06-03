@@ -1,19 +1,32 @@
 {% extends "homepage/projecttemplate.html" %}
 {% load static %}
 
-{% block gif %}
-<div class="project-header">
-    <!-- Include GIF specific to this project -->
-    <img src="{% static 'project_gif.gif' %}" alt="Project GIF">
-</div>
-{% endblock %}
-
 {% block about %}
 <div class="project-section">
-    <div class="about-box">
-        <h2>About</h2>
-        <!-- Add project-specific about content here -->
-        <p>This is a brief introduction to the project.</p>
+    <div class="about-container">
+        <div class="about-box">
+            <h2>About</h2>
+            <!-- Add project-specific about content here -->
+            <p>"A God's Draw" is an engaging game that combines elements of strategy and luck. 
+                Players take on the role of a god, using their divine powers to draw cards and manipulate the game's outcome. 
+                Each draw brings new opportunities and challenges, requiring players to think carefully about their next move.</p>
+            <h3>Key Features:</h3>
+            <ul>
+                <li>Strategic Gameplay: Players must use their wits and divine abilities to outsmart their opponents</li>
+                <li>Card Drawing Mechanic: The core mechanic of drawing cards adds a layer of unpredictability and excitement</li>
+                <li>Divine Powers: Each player has unique powers that can change the course of the game</li>
+            </ul>
+        </div>
+    
+        <div class="gallery-box">
+            <!-- Image Gallery -->
+            <div class="image-gallery">
+                <img src="{% static 'homepage/imag1.png' %}" alt="Screenshot 1">
+                <img src="{% static 'homepage/imag2.png' %}" alt="Screenshot 2">
+                <img src="{% static 'homepage/imag3.png' %}" alt="Screenshot 3">
+                <!-- Add more images as needed -->
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}
@@ -22,8 +35,15 @@
 <div class="project-section">
     <div class="info-box">
         <h2>Project Info</h2>
-        <!-- Add project-specific info content here -->
-        <p>This section contains project details.</p>
+        <p>This project was developed over the course of two semesters as part of a bachelor's degree program. 
+            As the team leader, my responsibilities included:</p>
+        <ul>
+            <li>Organizing team meetings and delegating tasks</li>
+            <li>Coordinating communication between team members</li>
+            <li>Ensuring project milestones were met on schedule</li>
+            <li>Providing guidance and support to team members</li>
+        </ul>
+        <p>Additionally, the project involved collaboration with faculty advisors and stakeholders to ensure alignment with project goals and requirements.</p>
     </div>
 </div>
 {% endblock %}
@@ -32,6 +52,23 @@
 <div class="learnings-section">
     <h2>What I Learned</h2>
     <!-- Add project-specific learnings here -->
-    <p>This section discusses what I learned from the project.</p>
+    <ol>
+        <li>
+            Project Management
+            <ul>
+                <li>Enhanced ability to manage a project from concept to completion</li>
+                <li>Developed skills in task prioritization, time management, and meeting deadlines</li>
+            </ul>
+        </li>
+        <li>
+            Technical Skills
+            <ul>
+                <li>
+                    Instead of just doing gameplay mechanics this time I got to play around with 
+                    environmental design
+                </li>
+            </ul>
+        </li>
+    </ol>
 </div>
 {% endblock %}

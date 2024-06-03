@@ -5,6 +5,7 @@
     <head>
         <title>{% block title %}Charlie Eikås{% endblock %}</title>
         <link rel="stylesheet" href="{% static 'homepage/styles.css' %}">
+        <script src="https://kit.fontawesome.com/e9186d1de5.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <!-- SIDEBAR -->
@@ -12,21 +13,21 @@
             <img src="{% static 'homepage/bilde.jpg' %}" alt="Picture of me" id="me">
             <ul class="nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="https://github.com/TheKingChu">GitHub</a>
+                    <a class="nav-link" href="https://github.com/TheKingChu">GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://thekingcharlie.itch.io/">Itch.io</a>
+                    <a class="nav-link" href="https://thekingcharlie.itch.io/">Itch.io <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://www.linkedin.com/in/charlieeik%C3%A5s/">LinkedIn</a>
+                    <a class="nav-link" href="https://www.linkedin.com/in/charlieeik%C3%A5s/">LinkedIn <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% static 'homepage/CV.pdf' %}" target="_blank">Resume</a>
+                    <a class="nav-link" href="{% static 'homepage/CV.pdf' %}" target="_blank">Resume <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 <hr>
                 </li>
                 <li class="nav-item">
                     <a href="mailto:eikascharlie@gmail.com">
-                        <button id="contact-button">Contact Me</button>
+                        <button id="contact-button">Contact Me <i class="fa-solid fa-envelope"></i></button>
                     </a>
                 </li>
             </ul>
@@ -35,7 +36,7 @@
         <!-- MAIN PAGE -->
         <div class="main-page">
             <a href="{% url 'index' %}">
-                <button id="back-button">Back</button>
+                <button id="back-button"><i class="fa-solid fa-left-long"></i></button>
             </a>
             {% block gif %}
             <div class="project-header">
