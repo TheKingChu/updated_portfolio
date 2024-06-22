@@ -51,7 +51,7 @@
         </div>
         <div class="project-status">
             <span class="status-icon-active"></span>
-            <p class="status-text">Taking the CS50W course from Harvard</p>
+            <p class="status-text">Updating the portfolio</p>
         </div>
     </div>
 
@@ -153,8 +153,8 @@
 
     <!-- CHECK OUT MORE PROJECTS -->
     <div>
-        <button>
-            <a href="">Check Out More Projects</a>
-        </button>
+        <a href="{% url 'projectsview' %}">
+            <button id="more-projects-button">Check Out More Projects</button>
+        </a>
     </div>
 {% endblock %}

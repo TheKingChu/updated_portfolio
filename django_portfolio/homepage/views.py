@@ -9,3 +9,9 @@ def agodsdraw(request):
 
 def negativeeffect(request):
     return render(request, "homepage/negativeeffect.html")
+
+def onemoredoor(request):
+    return render(request, "homepage/onemoredoor.html")
+
+def projectsview(request):
+    return render(request, "homepage/moreprojects.html")

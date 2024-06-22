@@ -196,7 +196,7 @@ hr{
 }
 
 .project-points li {
-    position: relative; /* Position relative for pseudo-element */
+    position: relative;
     margin-bottom: 20px;
 }
 
@@ -247,6 +247,30 @@ hr{
     cursor: not-allowed;
 }
 
+/* MORE PROJECTS BUTTON */
+#more-projects-button{
+    background-color: #7de2dc;
+    border: 2px solid #7de2dc;
+    padding: 10px 25px;
+    display: inline-block;
+    font-size: 24px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+#more-projects-button a{
+    text-align: center;
+    text-decoration: none;
+    color: #191923;
+}
+
+#more-projects-button:hover{
+    background-color: #393939;
+    color: #FBFEF9;
+}
 
 /* READ ME PAGE */
 #back-button{
@@ -377,9 +401,77 @@ hr{
     display: none;
 }
 
+/* MORE PROJECTS */
+.more-projects-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 -10px; /* Adjusts spacing between columns */
+}
+
+.more-projects-column {
+    flex: 1 0 30%; /* Flex-grow: 1, Flex-shrink: 0, Flex-basis: 30% */
+    padding: 10px;
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+}
+
+.more-projects-card {
+    background-color: #393939;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #FBFEF9;
+}
+
+.more-projects-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.more-projects-card h3 {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #7de2dc;
+}
+
+.more-projects-card ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.more-projects-card li {
+    margin-bottom: 10px;
+    color: #f7b2b2;
+}
+
+.more-projects-card li::marker {
+    color: #7de2dc; /* Change the color of the bullet points */
+}
+
+.more-projects-link{
+    text-decoration: none;
+    cursor: default;
+}
+
+/* LAPTOP */
+@media screen and (max-width: 1600px){
+    body{
+        margin-right: 5%;
+    }
+
+    .more-projects-column {
+        flex: 1 0 45%; /* Two columns in a row */
+    }
+}
 
 /* PHONE VIEW */
 @media screen and (max-width: 1200px){
+    body{
+        margin: 0;
+    }
+    
     .sidebar{
         display: none;
     }
@@ -503,8 +595,14 @@ hr{
     }
 
     /* Style the projects section */
+    #back-button{
+        font-size: 40px;
+        width: 1030px;
+        margin-bottom: 40px;
+    }
+
     .project-card {
-        width: 90%; /* Adjust width as needed */
+        width: 90%;
         flex-direction: column;
     }
 
@@ -521,15 +619,24 @@ hr{
         font-size: 50px;
     }
 
-    /* Style the about me section */
     .about-container {
         flex-direction: column;
     }
-
-    .about-box, .info-box {
+    
+    .info-box, .learnings-section {
         width: 90%;
         margin: 0 auto;
         margin-bottom: 20px;
-        text-align: center;
+    }
+
+    .gallery-box, .about-box{
+        margin: 0 auto;
+        margin-bottom: 20px;
+        max-width: 90%;
+    }
+
+    /*more projects*/
+    .more-projects-column {
+        flex: 1 0 100%; /* One column in a row */
     }
 }

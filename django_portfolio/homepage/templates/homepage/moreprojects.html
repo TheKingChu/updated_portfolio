@@ -1,0 +1,75 @@
+{% extends "homepage/layout.html" %}
+{% load static %}
+
+{% block body %}
+    <a href="{% url 'index' %}">
+        <button id="back-button"><i class="fa-solid fa-left-long"></i></button>
+    </a>
+
+    <div class="more-projects-row">
+        <div class="more-projects-column">
+            <a class="more-projects-link" href="">
+                <div class="more-projects-card">
+                    <img src="" alt="">
+                    <h3>Playlist Generator</h3>
+                    <ul>
+                        <li>Integrating Spotify's API</li>
+                        <li>Generates based on genre or vibe</li>
+                    </ul>
+                </div>
+            </a>
+        </div>
+        <div class="more-projects-column">
+            <a class="more-projects-link" href="">
+                <div class="more-projects-card">
+                    <img src="" alt="">
+                    <h3>Pomodoro App</h3>
+                    <ul>
+                        <li>Space themed pomodoro app</li>
+                        <li>Gamification of productivity</li>
+                        <li>Still adding more functionality</li>
+                    </ul>
+                </div>
+            </a>
+        </div>
+        <div class="more-projects-column">
+            <a class="more-projects-link" href="">
+                <div class="more-projects-card">
+                    <img src="" alt="">
+                    <h3>Crypt of Damnation: Unleash the Curse</h3>
+                    <ul>
+                        <li>Rougelite game</li>
+                        <li>Focus on enemy AI, player interaction, design</li>
+                        <li>I'm making all the art and animation</li>
+                    </ul>
+                </div>
+            </a>
+        </div>
+        <div class="more-projects-column">
+            <a class="more-projects-link" href="">
+                <div class="more-projects-card">
+                    <img src="" alt="">
+                    <h3>Kognito</h3>
+                    <ul>
+                        <li>Made for my girlfriends exam project</li>
+                        <li>Made by following design file and adding functionality</li>
+                        <li>Made in 3 days</li>
+                    </ul>
+                </div>
+            </a>
+        </div>
+        <div class="more-projects-column">
+            <a class="more-projects-link" href="">
+                <div class="more-projects-card">
+                    <img src="" alt="">
+                    <h3>Python Quiz Game</h3>
+                    <ul>
+                        <li>Utilizes PyGame for GUI</li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </a>
+        </div>
+    </div>
+{% endblock %}
