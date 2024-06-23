@@ -385,6 +385,10 @@ hr{
     line-height: 1.5;
 }
 
+.learnings-section ol{
+    line-height: 2.0;
+}
+
 .learnings-section h2{
     color: #f7b2b2;
 }

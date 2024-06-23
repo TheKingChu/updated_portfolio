@@ -1,19 +1,33 @@
 {% extends "homepage/projecttemplate.html" %}
 {% load static %}
 
-{% block gif %}
-<div class="project-header">
-    <!-- Include GIF specific to this project -->
-    <img src="{% static 'project_gif.gif' %}" alt="Project GIF">
-</div>
-{% endblock %}
-
 {% block about %}
 <div class="project-section">
-    <div class="about-box">
-        <h2>About</h2>
-        <!-- Add project-specific about content here -->
-        <p>This is a brief introduction to the project.</p>
+    <div class="about-container">
+        <div class="about-box">
+            <h2>About</h2>
+            <!-- Add project-specific about content here -->
+            <p>
+                Negative Effect is a VR horror game where you the player
+                must survive the night. Monsters will hunt you as you try to
+                collect notes. The only way to survive is by being brave and
+                taking photos of the monsters.
+            </p>
+            <h3>Key Features:</h3>
+            <ul>
+                <li>Survival Horror Gameplay: Navigate through a dark, eerie environment where survival depends on your wits and courage</li>
+                <li>Photography Mechanic: Use your VR camera to take photos of the monsters. Capturing them on film is your only defense and the key to your survival.</li>
+            </ul>
+        </div>
+        <div class="gallery-box">
+            <!-- Image Gallery -->
+            <div class="image-gallery">
+                <img src="{% static 'homepage/ng1.png' %}" alt="Screenshot 1">
+                <img src="{% static 'homepage/ng2.png' %}" alt="Screenshot 2">
+                <img src="{% static 'homepage/ng3.png' %}" alt="Screenshot 3">
+                <!-- Add more images as needed -->
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}
@@ -22,8 +36,14 @@
 <div class="project-section">
     <div class="info-box">
         <h2>Project Info</h2>
-        <!-- Add project-specific info content here -->
-        <p>This section contains project details.</p>
+        <p>This project was developed during one semester. I had the
+            role as lead programmer. My responsibilities included:
+        </p>
+        <ul>
+            <li>Creating and maintaining the main VR mechanics</li>
+            <li>Make sure the other programmers had tasks to do</li>
+            <li>Update the team lead on the progress</li>
+        </ul>
     </div>
 </div>
 {% endblock %}
@@ -32,6 +52,41 @@
 <div class="learnings-section">
     <h2>What I Learned</h2>
     <!-- Add project-specific learnings here -->
-    <p>This section discusses what I learned from the project.</p>
-</div>
+    <ol>
+        <li>
+            Project Management Skills
+            <ul>
+                <li>Leading a team of programmers and coordinating tasks effectively</li>
+                <li>Maintaining clear communication with team members and the team lead</li>
+            </ul>
+        </li>
+        <li>
+            VR Development
+            <ul>
+                <li>Developing and refining VR mechanics specific to horror gameplay</li>
+                <li>Understanding the challenges and solutions unique to VR game development</li>
+            </ul>
+        </li>
+        <li>
+            Problem-Solving and Debugging
+            <ul>
+                <li>Troubleshooting complex issues in a VR environment</li>
+                <li>Implementing efficient solutions to ensure smooth gameplay</li>
+            </ul>
+        </li>
+        <li>
+            Team Collaboration
+            <ul>
+                <li>Working closely with other programmers and artists to achieve project goals</li>
+                <li>Learning to balance individual responsibilities with team objectives</li>
+            </ul>
+        </li>
+        <li>
+            Time Management
+            <ul>
+                <li>Meeting project deadlines within a tight semester schedule</li>
+                <li>Prioritizing tasks to maximize productivity and project quality</li>
+            </ul>
+        </li>
+    </ol>
 {% endblock %}
