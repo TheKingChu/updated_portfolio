@@ -545,6 +545,12 @@ hr{
         margin-right: 10px;
     }
 
+    /* about me text */
+    .about-text{
+        font-size: 30px;
+        margin: 5%;
+    }
+
     /* Style the tech stack section */
     #tech-container {
         width: 100%; /* Adjust width as needed */
@@ -594,13 +600,14 @@ hr{
         opacity: 1;
     }
 
-    /* Style the projects section */
+    /* BACK BUTTON */
     #back-button{
-        font-size: 40px;
-        width: 1030px;
+        font-size: 100px;
+        width: 800px;
         margin-bottom: 40px;
     }
 
+    /* style projects */
     .project-card {
         width: 90%;
         flex-direction: column;
@@ -627,16 +634,23 @@ hr{
         width: 90%;
         margin: 0 auto;
         margin-bottom: 20px;
+        font-size: 30px;
     }
 
     .gallery-box, .about-box{
         margin: 0 auto;
         margin-bottom: 20px;
         max-width: 90%;
+        font-size: 30px;
     }
 
     /*more projects*/
+    #more-projects-button{
+        font-size: 57px;
+        margin-bottom: 40px;
+    }
     .more-projects-column {
         flex: 1 0 100%; /* One column in a row */
+        max-width: 90%;
     }
 }
