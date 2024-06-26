@@ -369,6 +369,17 @@ hr{
     border-radius: 10px;
 }
 
+.image-gallery-vertical{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.image-gallery-vertical img{
+    width: 50%;
+    border-radius: 10px;
+}
+
 .project-section {
     margin-bottom: 40px;
 }

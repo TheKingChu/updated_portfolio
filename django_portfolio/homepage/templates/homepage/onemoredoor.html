@@ -1,0 +1,72 @@
+{% extends "homepage/projecttemplate.html" %}
+{% load static %}
+
+{% block about %}
+<div class="project-section">
+    <div class="about-container">
+        <div class="about-box">
+            <h2>About</h2>
+            <p>
+                One More Door is a puzzle game made for andriod. 
+                Solve small puzzles in each room to find the key and unlock the door to get to the next. 
+                Can you complete every puzzle?
+            </p>
+            <h3>Key Features:</h3>
+            <ul>
+                <li>Phone Inputs: Tilt, shake and more to solve puzzles</li>
+                <li>Different Themes: 8 puzzles for each theme</li>
+            </ul>
+        </div>
+        <div class="gallery-box">
+            <div class="image-gallery-vertical"> 
+                <img src="{% static 'homepage/omd1.jpg' %}" alt="Screenshot 1">
+                <img src="{% static 'homepage/omd2.jpg' %}" alt="Screenshot 2">
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block project_info %}
+<div class="project-section">
+    <div class="info-box">
+        <h2>Project Info</h2>
+        <p>This project was my first semester project and the first game
+            I've worked on.
+        </p>
+        <ul>
+            <li>Made the tilt and shake functionality work</li>
+            <li>Helped on creating different level designs for puzzles</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+{% block learnings %}
+<div class="learnings-section">
+    <h2>What I Learned</h2>
+    <ol>
+        <li>
+            Mobile Development
+            <ul>
+                <li>Learned how to create apps for andriod</li>
+                <li>Learned how to work with vertical formats</li>
+            </ul>
+        </li>
+        <li>
+            Team Work
+            <ul>
+                <li>Working closly with different departments</li>
+                <li>This was during covid so good communication was key</li>
+            </ul>
+        </li>
+        <li>
+            UI/UX
+            <ul>
+                <li>Creating vector art with Adobe Illustrator</li>
+                <li>Learned UI basics</li>
+            </ul>
+        </li>
+    </ol>
+</div>
+{% endblock %}
