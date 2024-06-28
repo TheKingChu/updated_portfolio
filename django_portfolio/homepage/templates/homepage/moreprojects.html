@@ -8,67 +8,120 @@
 
     <div class="more-projects-row">
         <div class="more-projects-column">
-            <a class="more-projects-link" href="">
-                <div class="more-projects-card">
+            <div class="more-projects-card">
+                <div class="carousel-container" data-project="playlistgenerator">
+                    <button class="carousel-prev" onclick="prevImage(this)"><i class="fa-solid fa-square-caret-left"></i></button>
                     <img src="{% static 'homepage/playlistgenerator.png' %}" alt="Playlist generator homepage">
-                    <h3>Playlist Generator</h3>
-                    <ul>
-                        <li>Integrating Spotify's API</li>
-                        <li>Generates based on genre or vibe</li>
-                    </ul>
+                    <button class="carousel-next" onclick="nextImage(this)"><i class="fa-solid fa-square-caret-right"></i></button>
                 </div>
-            </a>
+                <h3>Playlist Generator</h3>
+                <ul>
+                    <li>Integrating Spotify's API</li>
+                    <li>Generates based on genre or vibe</li>
+                </ul>
+            </div>
         </div>
         <div class="more-projects-column">
-            <a class="more-projects-link" href="">
-                <div class="more-projects-card">
+            <div class="more-projects-card">
+                <div class="carousel-container" data-project="pomodoro">
+                    <button class="carousel-prev" onclick="prevImage(this)"><i class="fa-solid fa-square-caret-left"></i></button>
                     <img src="{% static 'homepage/pomodoro.png' %}" alt="Pomodoro App">
-                    <h3>Pomodoro App</h3>
-                    <ul>
-                        <li>Space themed pomodoro app</li>
-                        <li>Gamification of productivity</li>
-                        <li>Still adding more functionality</li>
-                    </ul>
+                    <button class="carousel-next" onclick="nextImage(this)"><i class="fa-solid fa-square-caret-right"></i></button>
                 </div>
-            </a>
+                <h3>Pomodoro App</h3>
+                <ul>
+                    <li>Space themed pomodoro app</li>
+                    <li>Gamification of productivity</li>
+                    <li>Still adding more functionality</li>
+                </ul>
+            </div>
         </div>
         <div class="more-projects-column">
-            <a class="more-projects-link" href="">
-                <div class="more-projects-card">
-                    <img src="{% static 'homepage/crypt.png' %}" alt="Crypt gameplay">
-                    <h3>Crypt of Damnation: Unleash the Curse</h3>
-                    <ul>
-                        <li>Rougelite game</li>
-                        <li>Focus on enemy AI, player interaction, design</li>
-                        <li>I'm making all the art and animations</li>
-                    </ul>
+            <div class="more-projects-card">
+                <div class="carousel-container" data-project="crypt">
+                    <button class="carousel-prev" onclick="prevImage(this)"><i class="fa-solid fa-square-caret-left"></i></button>
+                    <img src="{% static 'homepage/crypt4.png' %}" alt="Crypt gameplay" class="carousel-image">
+                    <button class="carousel-next" onclick="nextImage(this)"><i class="fa-solid fa-square-caret-right"></i></button>
                 </div>
-            </a>
+                <h3>Crypt of Damnation: Unleash the Curse</h3>
+                <ul>
+                    <li>Rougelite game</li>
+                    <li>Focus on enemy AI, player interaction, design</li>
+                    <li>I'm making all the art and animations</li>
+                </ul>
+            </div>
         </div>
         <div class="more-projects-column">
-            <a class="more-projects-link" href="">
-                <div class="more-projects-card">
+            <div class="more-projects-card">
+                <div class="carousel-container" data-project="kognito">
+                    <button class="carousel-prev" onclick="prevImage(this)"><i class="fa-solid fa-square-caret-left"></i></button>
                     <img src="{% static 'homepage/kognito.png' %}" alt="Kognito homepage">
-                    <h3>Kognito</h3>
-                    <ul>
-                        <li>Made for my girlfriends exam project</li>
-                        <li>Made by following design file and adding functionality</li>
-                        <li>Made in 3 days</li>
-                    </ul>
+                    <button class="carousel-next" onclick="nextImage(this)"><i class="fa-solid fa-square-caret-right"></i></button>
                 </div>
-            </a>
+                <h3>Kognito</h3>
+                <ul>
+                    <li>Made for my girlfriends exam project</li>
+                    <li>Made by following design file and adding functionality</li>
+                    <li>Made in 3 days</li>
+                </ul>
+            </div>
         </div>
         <div class="more-projects-column">
-            <a class="more-projects-link" href="">
-                <div class="more-projects-card">
+            <div class="more-projects-card">
+                <div class="carousel-container" data-project="pythonquiz">
+                    <button class="carousel-prev" onclick="prevImage(this)"><i class="fa-solid fa-square-caret-left"></i></button>
                     <img src="{% static 'homepage/pythonquizgame.png' %}" alt="Python Quiz Game">
-                    <h3>Python Quiz Game</h3>
-                    <ul>
-                        <li>Utilizes PyGame for GUI</li>
-                        <li>CSV file containing the questions, choices, answers and images</li>
-                    </ul>
+                    <button class="carousel-next" onclick="nextImage(this)"><i class="fa-solid fa-square-caret-right"></i></button>
                 </div>
-            </a>
+                <h3>Python Quiz Game</h3>
+                <ul>
+                    <li>Utilizes PyGame for GUI</li>
+                    <li>CSV file containing the questions, choices, answers and images</li>
+                </ul>
+            </div>
         </div>
     </div>
+
+    <script>
+        const images = {
+            "playlistgenerator": [
+                "{% static 'homepage/playlistgenerator.png' %}"
+            ],
+            "pomodoro": [
+                "{% static 'homepage/pomodoro.png' %}"
+            ],
+            "crypt": [
+                "{% static 'homepage/crypt.png' %}",
+                "{% static 'homepage/crypt2.png' %}",
+                "{% static 'homepage/crypt3.png' %}",
+                "{% static 'homepage/crypt4.png' %}"
+            ],
+            "kognito": [
+                "{% static 'homepage/kognito.png' %}"
+            ],
+            "pythonquiz": [
+                "{% static 'homepage/pythonquizgame.png' %}"
+            ]
+        };
+
+        function prevImage(button) {
+            const container = button.parentNode;
+            const img = container.querySelector('.carousel-image');
+            const project = container.getAttribute('data-project');
+            const imgArray = images[project];
+            let currentIndex = imgArray.findIndex(src => img.src.endsWith(src));
+            currentIndex = (currentIndex - 1 + imgArray.length) % imgArray.length;
+            img.src = imgArray[currentIndex];
+        }
+    
+        function nextImage(button) {
+            const container = button.parentNode;
+            const img = container.querySelector('.carousel-image');
+            const project = container.getAttribute('data-project');
+            const imgArray = images[project];
+            let currentIndex = imgArray.findIndex(src => img.src.endsWith(src));
+            currentIndex = (currentIndex + 1) % imgArray.length;
+            img.src = imgArray[currentIndex];
+        }
+    </script>
 {% endblock %}

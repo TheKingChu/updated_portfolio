@@ -473,6 +473,46 @@ hr{
     cursor: default;
 }
 
+.carousel-container {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.carousel-image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+.carousel-prev i, .carousel-next i {
+    font-size: 50px;
+    color: #7de2dc;
+}
+
+.carousel-prev:hover i, .carousel-next:hover i {
+    color: #4bb8b3;
+}
+
+
+
 /* LAPTOP */
 @media screen and (max-width: 1600px){
     body{
