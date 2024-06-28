@@ -1,0 +1,727 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #0c0c0c;
+    color: #f7f7f2;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/*SIDEBAR*/
+.sidebar{
+    height: 100%;
+    width: 400px; /* Adjust width as needed */
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 20px; /* Adjust top padding as needed */
+    background-color: #0c0c0c;
+}
+
+#me{
+    display: block;
+    width: 128px;
+    height: auto;
+    border-radius: 10px;
+    border: 5px solid #0c0c0c;
+    padding: 5px;
+    box-shadow: 0 4px 8px 0 rgba(132, 132, 132, 0.2);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+.nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    margin-top: 30px;
+    margin-bottom: 10px; /* Add spacing between list items */
+    text-align: center;
+    font-weight: bolder;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #f7f7f2;
+}
+
+.nav-link:hover{
+    color: #f7b2b2;
+    text-decoration: underline;
+}
+
+hr{
+    margin-top: 40px;
+    width: 150px;
+    size: 10px;
+    border-color: #f7b2b2;
+}
+
+#contact-button{
+    background-color: #393939;
+    border: 2px solid #393939;
+    color: #FBFEF9;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    border-radius: 10px;
+    margin-top: 10px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+#contact-button:hover{
+    background-color: #7de2dc;
+    color: #191923;
+}
+
+/*MAIN INDEX PAGE*/
+.main-page{
+    margin-left: 400px; /* Adjust margin-left to match sidebar width */
+    padding-left: 20px;
+}
+
+.title h2{
+    font-size: 96px;
+    color: #f7b2b2;
+    margin-bottom: -50px;
+}
+
+.title h3{
+    font-size: 40px;
+    color: #f7b2b2;
+}
+
+.smaller-titles{
+    font-size: 24px;
+    font-weight: 600;
+    color: #7de2dc;
+}
+
+/* CURRENTLY WORKING ON */
+#current-work{
+    width: 500px;
+    word-wrap: break-word;
+}
+
+/* STATUS ICONS FOR CURRENTLY WORKING ON */
+.project-status {
+    display: flex;
+    align-items: center;
+}
+
+.status-icon-active {
+    width: 20px;
+    height: 20px;
+    background-color: #35a935; /* Green color for the checkmark */
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.status-text {
+    font-size: 16px;
+}
+
+/* CURRENT TECHNOLOGIES */
+#tech-container{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.tech-item{
+    font-size: 24px;
+    color: #f7b2b2;
+    display: inline-block;
+    padding: 5px;
+    border: 3px solid #f7b2b2;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+/* PROJECTS */
+.project-card {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: #393939;
+    color: #FBFEF9;
+    overflow: hidden; /* Make sure child elements dont overflow */
+}
+
+/* PROJECT IMAGE */
+.project-image {
+    flex: 1;
+    display: flex;
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 0 0 10px;
+}
+
+/* PROJECT DETAILS */
+.project-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* PROJECT TITLE */
+.project-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+    color: #f7b2b2;
+}
+
+/* PROJECT POINTS */
+.project-points {
+    list-style-type: none;
+    margin-left: 40px;
+    padding-left: 0;
+}
+
+.project-points li {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+/* PROJECT BUTTONS */
+.project-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.project-buttons button {
+    flex: 1;
+    margin-right: 10px;
+    background-color: #191923;
+    border: 2px solid #191923;
+    color: #FBFEF9;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 24px;
+    border-radius: 10px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.project-buttons button:hover {
+    background-color: #7de2dc;
+    color: #191923;
+}
+
+/* READ ME BUTTON */
+.read-me{
+    opacity: 1;
+}
+
+.read-me:hover{
+    cursor: pointer;
+}
+
+.read-me-locked{
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.read-me-locked:hover{
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* MORE PROJECTS BUTTON */
+#more-projects-button{
+    background-color: #7de2dc;
+    border: 2px solid #7de2dc;
+    padding: 10px 25px;
+    display: inline-block;
+    font-size: 24px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+
+    text-decoration: none;
+    color: #191923;
+}
+
+#more-projects-button a{
+    text-align: center;
+    text-decoration: none;
+    color: #191923;
+}
+
+#more-projects-button:hover{
+    background-color: #393939;
+    color: #FBFEF9;
+}
+
+/* READ ME PAGE */
+#back-button{
+    background-color: #393939;
+    border: 2px solid #393939;
+    color: #FBFEF9;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    border-radius: 10px;
+    margin-top: 10px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+#back-button:hover{
+    background-color: #7de2dc;
+    color: #191923;
+}
+
+.project-header {
+    margin-bottom: 20px;
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-box{
+    flex: 1;
+    background-color: #393939;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-right: 20px; /* Add margin between boxes */
+    margin-bottom: 20px; /* Add margin at the bottom */
+    max-width: 50%;
+
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+.info-box{
+    background-color: #393939;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-right: 20px; /* Add margin between boxes */
+    margin-bottom: 20px; /* Add margin at the bottom */
+
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+.info-box h2{
+    color: #f7b2b2;
+}
+
+.about-box h2, h3{
+    color: #f7b2b2;
+}
+
+/* Clear the margin for the last item in a row */
+.about-box:nth-child(2n), .info-box:nth-child(2n) {
+    margin-right: 0;
+}
+
+.about-box li, .info-box li{
+    position: relative; /* Position relative for pseudo-element */
+    margin-bottom: 20px;
+}
+
+.about-box li::marker, .info-box li::marker{
+    color: #7de2dc;
+}
+
+.gallery-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 50%;
+}
+
+.image-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between images */
+}
+
+.image-gallery img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.image-gallery-vertical{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.image-gallery-vertical img{
+    width: 50%;
+    border-radius: 10px;
+}
+
+.project-section {
+    margin-bottom: 40px;
+}
+
+.learnings-section {
+    background-color: #393939;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-right: 20px; /* Add margin between boxes */
+    margin-bottom: 20px;
+
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+.learnings-section ol{
+    line-height: 2.0;
+}
+
+.learnings-section h2{
+    color: #f7b2b2;
+}
+
+.learnings-section li{
+    position: relative; /* Position relative for pseudo-element */
+}
+
+.learnings-section li::marker{
+    color: #7de2dc;
+}
+
+#social-container{
+    display: none;
+}
+
+/* MORE PROJECTS */
+.more-projects-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 -10px; /* Adjusts spacing between columns */
+}
+
+.more-projects-column {
+    flex: 1 0 30%; /* Flex-grow: 1, Flex-shrink: 0, Flex-basis: 30% */
+    padding: 10px;
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+}
+
+.more-projects-card {
+    background-color: #393939;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #FBFEF9;
+}
+
+.more-projects-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.more-projects-card h3 {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #7de2dc;
+}
+
+.more-projects-card ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.more-projects-card li {
+    margin-bottom: 10px;
+    color: #f7b2b2;
+}
+
+.more-projects-card li::marker {
+    color: #7de2dc; /* Change the color of the bullet points */
+}
+
+.more-projects-link{
+    text-decoration: none;
+    cursor: default;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.carousel-image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+.carousel-prev i, .carousel-next i {
+    font-size: 50px;
+    color: #7de2dc;
+}
+
+.carousel-prev:hover i, .carousel-next:hover i {
+    color: #4bb8b3;
+}
+
+
+
+/* LAPTOP */
+@media screen and (max-width: 1600px){
+    body{
+        margin-right: 5%;
+    }
+
+    .more-projects-column {
+        flex: 1 0 65%; /* One row */
+    }
+}
+
+/* PHONE VIEW */
+@media screen and (max-width: 1200px){
+    body{
+        margin: 0;
+    }
+    
+    .sidebar{
+        display: none;
+    }
+
+    .main-page{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .title h2{
+        font-size: 100px;
+    }
+
+    .title h3{
+        font-size: 80px;
+    }
+
+    .smaller-titles{
+        font-size: 60px;
+    }
+
+    p{
+        font-size: 30px;
+    }
+
+    #social-container{
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        list-style: none;
+    }
+
+    .social-link button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        margin-left: 30px;
+    }
+
+    .social-link button i {
+        font-size: 100px;
+        color: #FBFEF9;
+    }
+
+    .social-link button:hover i {
+        color: #f7b2b2;
+    }
+
+    /* Style the currently working on section */
+    #current-work {
+        width: 90%; /* Adjust width as needed */
+    }
+
+    .status-text{
+        font-size: 30px;
+        text-align: start;
+    }
+
+    .status-icon-active{
+        width: 20px;
+        height: 20px;
+        min-width: 15px; /* Minimum width for smaller screens */
+        min-height: 15px; /* Minimum height for smaller screens */
+        background-color: #35a935;
+        margin-right: 10px;
+    }
+
+    /* about me text */
+    .about-text{
+        font-size: 30px;
+        margin: 5%;
+    }
+
+    /* Style the tech stack section */
+    #tech-container {
+        width: 100%; /* Adjust width as needed */
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .tech-item {
+        width: 100px;
+        height: 100px;
+        font-size: 0;
+        margin: 10px;
+    }
+
+    #csharp{
+        font-size: 57px;
+    }
+
+    #django{
+        font-size: 30px;
+    }
+
+    .tech-item i {
+        display: inline-block;
+        position: relative;
+        font-size: 100px;
+        margin: 0 4px
+    }
+
+    .tech-item i::after {
+        content: attr(data-tooltip); /* Get the tooltip text from the 'data-tooltip' attribute */
+        position: absolute;
+        top: 120%; /* Position the tooltip below the icon */
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(255, 143, 143, 0.8);
+        color: #FBFEF9;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 14px;
+        white-space: nowrap; /* Prevent line breaks */
+        opacity: 0; /* Initially hide the tooltip */
+        transition: opacity 0.3s ease;
+    }
+
+    .tech-item i:hover::after {
+        opacity: 1;
+    }
+
+    /* BACK BUTTON */
+    #back-button{
+        font-size: 100px;
+        width: 800px;
+        margin-bottom: 40px;
+    }
+
+    /* style projects */
+    .project-card {
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .project-title {
+        font-size: 45px;
+    }
+
+    .project-points{
+        font-size: 30px;
+        word-wrap: break-word;
+    }
+
+    .project-buttons button {
+        font-size: 50px;
+    }
+
+    .about-container {
+        flex-direction: column;
+    }
+    
+    .info-box, .learnings-section {
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        font-size: 30px;
+    }
+
+    .gallery-box, .about-box{
+        margin: 0 auto;
+        margin-bottom: 20px;
+        max-width: 90%;
+        font-size: 30px;
+    }
+
+    /*more projects*/
+    #more-projects-button{
+        font-size: 60px;
+        height: 200px;
+        margin-bottom: 70px;
+        text-decoration: none;
+    }
+
+    .more-projects{
+        text-decoration: none;
+        color: #191923;
+    }
+
+    .more-projects-column {
+        flex: 1 0 100%; /* One column in a row */
+        max-width: 90%;
+    }
+
+    .more-projects-card li{
+        text-align: center;
+        list-style: none;
+    }
+}
