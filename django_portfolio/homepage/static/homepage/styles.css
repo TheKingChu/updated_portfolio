@@ -259,6 +259,9 @@ hr{
     margin-bottom: 20px;
     transition-duration: 0.4s;
     cursor: pointer;
+
+    text-decoration: none;
+    color: #191923;
 }
 
 #more-projects-button a{
@@ -666,6 +669,12 @@ hr{
         margin-bottom: 70px;
         text-decoration: none;
     }
+
+    .more-projects{
+        text-decoration: none;
+        color: #191923;
+    }
+
     .more-projects-column {
         flex: 1 0 100%; /* One column in a row */
         max-width: 90%;
