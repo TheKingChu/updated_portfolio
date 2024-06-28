@@ -477,7 +477,7 @@ hr{
     }
 
     .more-projects-column {
-        flex: 1 0 45%; /* Two columns in a row */
+        flex: 1 0 65%; /* One row */
     }
 }
 
@@ -661,11 +661,18 @@ hr{
 
     /*more projects*/
     #more-projects-button{
-        font-size: 57px;
-        margin-bottom: 40px;
+        font-size: 60px;
+        height: 200px;
+        margin-bottom: 70px;
+        text-decoration: none;
     }
     .more-projects-column {
         flex: 1 0 100%; /* One column in a row */
         max-width: 90%;
+    }
+
+    .more-projects-card li{
+        text-align: center;
+        list-style: none;
     }
 }
