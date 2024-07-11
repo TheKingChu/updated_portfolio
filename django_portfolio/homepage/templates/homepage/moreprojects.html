@@ -118,12 +118,21 @@
             ]
         };
 
+        document.addEventListener("DOMContentLoaded", () => {
+            for (const key in images) {
+                images[key].forEach(src => {
+                    const img = new Image();
+                    img.src = src;
+                });
+            }
+        });
+
         function prevImage(button) {
             const container = button.parentNode;
             const img = container.querySelector('.carousel-image');
             const project = container.getAttribute('data-project');
             const imgArray = images[project];
-            let currentIndex = imgArray.findIndex(src => img.src.endsWith(src));
+            let currentIndex = imgArray.findIndex(path => img.src.endsWith(path));
             currentIndex = (currentIndex - 1 + imgArray.length) % imgArray.length;
             img.src = imgArray[currentIndex];
         }
@@ -133,7 +142,7 @@
             const img = container.querySelector('.carousel-image');
             const project = container.getAttribute('data-project');
             const imgArray = images[project];
-            let currentIndex = imgArray.findIndex(src => img.src.endsWith(src));
+            let currentIndex = imgArray.findIndex(path => img.src.endsWith(path));
             currentIndex = (currentIndex + 1) % imgArray.length;
             img.src = imgArray[currentIndex];
         }
