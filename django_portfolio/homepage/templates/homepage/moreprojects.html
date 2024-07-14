@@ -11,8 +11,12 @@
             <div class="more-projects-card">
                 <div class="carousel-container" data-project="playlistgenerator">
                     <button class="carousel-prev" onclick="prevImage(this)"><i class="fa-solid fa-square-caret-left"></i></button>
+                    <div class="touch-zone left" onclick="prevImage(this)"><i class="fa-solid fa-square-caret-left"></i></div>
+                    <div class="touch-indicator left"><i class="fa-solid fa-square-caret-left"></i></div>
                     <img src="{% static 'homepage/playlistgenerator.png' %}" alt="Playlist generator homepage" class="carousel-image">
                     <button class="carousel-next" onclick="nextImage(this)"><i class="fa-solid fa-square-caret-right"></i></button>
+                    <div class="touch-zone right" onclick="nextImage(this)"><i class="fa-solid fa-square-caret-right"></i></div>
+                    <div class="touch-indicator right"><i class="fa-solid fa-square-caret-right"></i></div>
                 </div>
                 <h3>Playlist Generator</h3>
                 <ul>
@@ -25,8 +29,12 @@
             <div class="more-projects-card">
                 <div class="carousel-container" data-project="pomodoro">
                     <button class="carousel-prev" onclick="prevImage(this)"><i class="fa-solid fa-square-caret-left"></i></button>
+                    <div class="touch-zone left" onclick="prevImage(this)"><i class="fa-solid fa-square-caret-left"></i></div>
+                    <div class="touch-indicator left"><i class="fa-solid fa-square-caret-left"></i></div>
                     <img src="{% static 'homepage/pomodoro.png' %}" alt="Pomodoro App" class="carousel-image">
                     <button class="carousel-next" onclick="nextImage(this)"><i class="fa-solid fa-square-caret-right"></i></button>
+                    <div class="touch-zone right" onclick="nextImage(this)"><i class="fa-solid fa-square-caret-right"></i></div>
+                    <div class="touch-indicator right"><i class="fa-solid fa-square-caret-right"></i></div>
                 </div>
                 <h3>Pomodoro App</h3>
                 <ul>
@@ -40,8 +48,12 @@
             <div class="more-projects-card">
                 <div class="carousel-container" data-project="crypt">
                     <button class="carousel-prev" onclick="prevImage(this)"><i class="fa-solid fa-square-caret-left"></i></button>
+                    <div class="touch-zone left" onclick="prevImage(this)"><i class="fa-solid fa-square-caret-left"></i></div>
+                    <div class="touch-indicator left"><i class="fa-solid fa-square-caret-left"></i></div>
                     <img src="{% static 'homepage/crypt4.png' %}" alt="Crypt gameplay" class="carousel-image">
                     <button class="carousel-next" onclick="nextImage(this)"><i class="fa-solid fa-square-caret-right"></i></button>
+                    <div class="touch-zone right" onclick="nextImage(this)"><i class="fa-solid fa-square-caret-right"></i></div>
+                    <div class="touch-indicator right"><i class="fa-solid fa-square-caret-right"></i></div>
                 </div>
                 <h3>Crypt of Damnation: Unleash the Curse</h3>
                 <ul>
@@ -55,8 +67,12 @@
             <div class="more-projects-card">
                 <div class="carousel-container" data-project="kognito">
                     <button class="carousel-prev" onclick="prevImage(this)"><i class="fa-solid fa-square-caret-left"></i></button>
+                    <div class="touch-zone left" onclick="prevImage(this)"><i class="fa-solid fa-square-caret-left"></i></div>
+                    <div class="touch-indicator left"><i class="fa-solid fa-square-caret-left"></i></div>
                     <img src="{% static 'homepage/kognito.png' %}" alt="Kognito homepage" class="carousel-image">
                     <button class="carousel-next" onclick="nextImage(this)"><i class="fa-solid fa-square-caret-right"></i></button>
+                    <div class="touch-zone right" onclick="nextImage(this)"><i class="fa-solid fa-square-caret-right"></i></div>
+                    <div class="touch-indicator right"><i class="fa-solid fa-square-caret-right"></i></div>
                 </div>
                 <h3>Kognito</h3>
                 <ul>
@@ -70,8 +86,12 @@
             <div class="more-projects-card">
                 <div class="carousel-container" data-project="pythonquiz">
                     <button class="carousel-prev" onclick="prevImage(this)"><i class="fa-solid fa-square-caret-left"></i></button>
+                    <div class="touch-zone left" onclick="prevImage(this)"><i class="fa-solid fa-square-caret-left"></i></div>
+                    <div class="touch-indicator left"><i class="fa-solid fa-square-caret-left"></i></div>
                     <img src="{% static 'homepage/pythonquizgame.png' %}" alt="Python Quiz Game" class="carousel-image">
                     <button class="carousel-next" onclick="nextImage(this)"><i class="fa-solid fa-square-caret-right"></i></button>
+                    <div class="touch-zone right" onclick="nextImage(this)"><i class="fa-solid fa-square-caret-right"></i></div>
+                    <div class="touch-indicator right"><i class="fa-solid fa-square-caret-right"></i></div>
                 </div>
                 <h3>Python Quiz Game</h3>
                 <ul>
@@ -125,6 +145,14 @@
                     img.src = src;
                 });
             }
+
+            const touchZones = document.querySelectorAll(".touch-zone");
+            touchZones.forEach(zone => {
+                zone.addEventListener("click", () =>{
+                    const indicators = zone.parentElement.querySelectorAll(".touch-indicator");
+                    indicators.forEach(indicator => indicator.style.display = "none");
+                });
+            });
         });
 
         function prevImage(button) {

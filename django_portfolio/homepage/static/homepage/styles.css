@@ -503,7 +503,7 @@ hr{
 }
 
 .carousel-prev i, .carousel-next i {
-    font-size: 50px;
+    font-size: 100px;
     color: #7de2dc;
 }
 
@@ -511,7 +511,9 @@ hr{
     color: #4bb8b3;
 }
 
-
+.touch-zone, .touch-indicator{
+    display: none;
+}
 
 /* LAPTOP */
 @media screen and (max-width: 1600px){
@@ -723,5 +725,59 @@ hr{
     .more-projects-card li{
         text-align: center;
         list-style: none;
+    }
+
+    /* carousel */
+    .carousel-next, .carousel-prev{
+        display: none;
+    }
+    .touch-zone {
+        display: block;
+        position: absolute;
+        padding: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #7de2dc;
+        z-index: 10;
+        opacity: 0;
+        transition: opacity 0.1s ease;
+    }
+    .touch-zone.left {
+        left: 10px;
+        font-size: 150px;
+        display: flex;
+        align-items: center;
+    }
+    .touch-zone.right {
+        right: 10px;
+        font-size: 150px;
+        display: flex;
+        align-items: center;
+    }
+    .touch-indicator {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 10px;
+        color: #7de2dc;
+        z-index: 20;
+        display: block;
+        pointer-events: none;
+    }
+    .touch-indicator.left {
+        left: 10px;
+        font-size: 150px;
+        display: flex;
+        align-items: center;
+    }
+    .touch-indicator.right {
+        right: 10px;
+        font-size: 150px;
+        display: flex;
+        align-items: center;
+    }
+
+    .touch-zone:active {
+        opacity: 1;
     }
 }
