@@ -51,7 +51,7 @@
         </div>
         <div class="project-status">
             <span class="status-icon-active"></span>
-            <p class="status-text">Updating the portfolio</p>
+            <p class="status-text">One More Door, a mobile puzzle game using Unity and C#</p>
         </div>
     </div>
 
@@ -61,6 +61,7 @@
         <ul id="tech-container">
             <li class="tech-item"><i class="fa-brands fa-html5" data-tooltip="HTML"></i> HTML</li>
             <li class="tech-item"><i class="fa-brands fa-css3-alt" data-tooltip="CSS"></i> CSS</li>
+            <li class="tech-item"><i class="fa-brands fa-js"></i> Javascript</li>
             <li class="tech-item" id="csharp"><i data-tooltip="C#"></i>C#</li>
             <li class="tech-item"><i class="fa-brands fa-python" data-tooltip="Python"></i> Python</li>
             <li class="tech-item" id="django"><i data-tooltip="Django"></i>Django</li>
@@ -73,8 +74,31 @@
         <h4 class="smaller-titles">About Me:</h4>
         <p class="about-text">A passionate game developer with a Bachelor's degree in Games and Entertainment Technology.</p>
     </div>
-    <h4 class="smaller-titles">Projects:</h4>
 
+    <!-- CERTIFICATES -->
+    <h4 class="smaller-titles">Certificates:</h2>
+    <div id="certificate-section">
+        <div class="certificate-container">
+            <div class="certificate-card" onclick="openModal('{% static 'homepage/CS50P.png' %}')">
+                <img src="{% static 'homepage/CS50P.png' %}" alt="CS50P Certificate">
+            </div>
+            <div class="certificate-card" onclick="openModal('{% static 'homepage/CS50W.jpg' %}')">
+                <img src="{% static 'homepage/CS50W.jpg' %}" alt="CS50W Certificate">
+            </div>
+            <div class="certificate-card" onclick="openModal('{% static 'homepage/HP.jpg' %}')">
+                <img src="{% static 'homepage/HP.jpg' %}" alt="HP Certificate">
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL FOR ENLARGED CERTIFICATES -->
+    <div id="image-modal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-image" alt="">
+        <div id="caption"></div>
+    </div>
+    
+    <h4 class="smaller-titles">Projects:</h4>
     <!-- FIRST PROJECT CARD -->
     <div class="project-card">
         <div class="project-image">
@@ -157,4 +181,6 @@
             <button id="more-projects-button">Check Out More Projects</button>
         </a>
     </div>
+
+    <script src="{% static 'scripts/modal.js' %}"></script>
 {% endblock %}
