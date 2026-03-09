@@ -113,15 +113,20 @@ hr{
 /* STATUS ICONS FOR CURRENTLY WORKING ON */
 .project-status {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    gap: 10px;
 }
 
 .status-icon-active {
+    flex-shrink: 0;
     width: 20px;
     height: 20px;
-    background-color: #35a935; /* Green color for the checkmark */
+    min-width: 20px;
+    min-height: 20px;
+    background-color: #f7b2b2; /* Green color for the checkmark */
     border-radius: 50%;
-    margin-right: 10px;
+    margin-top: 20px;
+    margin-right: 0;
 }
 
 .status-text {
@@ -135,15 +140,17 @@ hr{
     list-style-type: none;
     padding: 0;
     margin: 0 auto;
+    gap: 12px;
 }
 
 .tech-item{
     font-size: 24px;
     color: #f7b2b2;
-    display: inline-block;
-    padding: 5px;
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 10px;
     border: 3px solid #f7b2b2;
-    margin-right: 10px;
+    margin-right: 0;
     border-radius: 10px;
 }
 
@@ -675,8 +682,10 @@ hr{
         height: 20px;
         min-width: 15px; /* Minimum width for smaller screens */
         min-height: 15px; /* Minimum height for smaller screens */
-        background-color: #35a935;
-        margin-right: 10px;
+        background-color: #f7b2b2;
+        border-radius: 50%;
+        margin-top: 40px;
+        margin-right: 0;
     }
 
     /* about me text */
@@ -689,14 +698,23 @@ hr{
     #tech-container {
         width: 100%; /* Adjust width as needed */
         margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         text-align: center;
+        gap: 16px;
+        padding: 0;
     }
 
     .tech-item {
         width: 100px;
         height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         font-size: 0;
-        margin: 10px;
+        margin: 0;
+        padding: 10px;
     }
 
     #csharp{

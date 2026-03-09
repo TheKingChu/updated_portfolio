@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get(
 )
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get("DEBUG", "False") == "True"
+DEBUG = os.environ.get("DEBUG", "True") == "True"
 
 ALLOWED_HOSTS = [
     "127.0.0.1",
@@ -149,44 +149,13 @@ STORAGES = {
 # Security settings for production behind Heroku
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-#if not DEBUG and "DYNO" in os.environ:
-#    SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
-#    SECURE_SSL_REDIRECT = True
-#    SESSION_COOKIE_SECURE = True
-#    CSRF_COOKIE_SECURE = True
-#    SECURE_CONTENT_TYPE_NOSNIFF = True
-#    X_FRAME_OPTIONS = "DENY"
-#    SECURE_HSTS_SECONDS = 31536000
-#    SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-#    SECURE_HSTS_PRELOAD = True
-
-LOGGING = {
-    "version": 1,
-    "disable_existing_loggers": False,
-    "handlers": {
-        "console": {
-            "class": "logging.StreamHandler",
-        },
-    },
-    "root": {
-        "handlers": ["console"],
-        "level": "WARNING",
-    },
-    "loggers": {
-        "django": {
-            "handlers": ["console"],
-            "level": "INFO",
-            "propagate": True,
-        },
-        "django.request": {
-            "handlers": ["console"],
-            "level": "ERROR",
-            "propagate": False,
-        },
-        "django.server": {
-            "handlers": ["console"],
-            "level": "ERROR",
-            "propagate": False,
-        },
-    },
-}
+if not DEBUG and "DYNO" in os.environ:
+    SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+    SECURE_SSL_REDIRECT = True
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
+    SECURE_CONTENT_TYPE_NOSNIFF = True
+    X_FRAME_OPTIONS = "DENY"
+    SECURE_HSTS_SECONDS = 3600
+    SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+    SECURE_REFERRER_POLICY = "same-origin"
